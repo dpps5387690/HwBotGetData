@@ -8,7 +8,10 @@ import wget
 def downloadWebvDriver():
     # get the latest chrome driver version number
     if os.path.isfile("chromedriver.exe"):
+        print("The chromedriver.exe is exist.")
         return
+    else:
+        print("The chromedriver.exe isn't exist.")
 
     url = 'https://chromedriver.storage.googleapis.com/LATEST_RELEASE'
     response = requests.get(url)
