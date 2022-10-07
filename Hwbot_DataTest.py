@@ -4,6 +4,8 @@ import time
 from datetime import datetime, timedelta
 from colorama import init, Fore, Back, Style
 
+from downloadWebDriver import downloadWebvDriver
+
 WebDriverPath = Service('./chromedriver.exe')
 WINDOW_SIZE = "1920,1080"
 chrome_options = webdriver.ChromeOptions()
@@ -68,7 +70,7 @@ def getallBenchMark(CPUStr):
 
 
 # 開始測量
-
+downloadWebvDriver()
 
 NowTime = datetime.now().strftime("%Y%m%d_%H%M%S")
 
