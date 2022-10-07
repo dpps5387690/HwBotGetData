@@ -67,26 +67,26 @@ def getallBenchMark(CPUStr):
     return BenchMarkList
 
 downloadWebvDriver()
-# # url = "https://hwbot.org/submission/4847355_splave_cinebench___2003_core_i9_12900k_12770_cb"
-# # getAllData(url)
-# start = time.time()
-#
-# BenchMarkList = getallBenchMark("core_i9_12900k")
-# print(Fore.CYAN)
-# for BenchMark in BenchMarkList:
-#     BenchMarkName = BenchMark["BenchMarkName"]
-#     BenchMarkValue = BenchMark["BenchMarkValue"]
-#     BenchMarkUrl = BenchMark["BenchMarkUrl"]
-#     if BenchMarkValue == "n/a":
-#         strline = "%s BenchMark No Rank Data\n" % (BenchMarkName)
-#         print(Fore.GREEN + strline + Fore.CYAN)
-#         continue
-#     getAllData(BenchMarkUrl)
-#
-# # 結束測量
-# end = time.time()
-#
-# # 輸出結果
-# TotalTIme = "Total Time: %s\n" % (timedelta(seconds=(end - start)))
-# # TotalTIme = "Total Time: %s\n" % (datetime.utcfromtimestamp(end - start).strftime("%H:%M:%S.%f"))
-# print(TotalTIme)
+# url = "https://hwbot.org/submission/4847355_splave_cinebench___2003_core_i9_12900k_12770_cb"
+# getAllData(url)
+start = time.time()
+
+BenchMarkList = getallBenchMark("core_i9_12900k")
+print(Fore.CYAN)
+for BenchMark in BenchMarkList:
+    BenchMarkName = BenchMark["BenchMarkName"]
+    BenchMarkValue = BenchMark["BenchMarkValue"]
+    BenchMarkUrl = BenchMark["BenchMarkUrl"]
+    if BenchMarkValue == "n/a":
+        strline = "%s BenchMark No Rank Data\n" % (BenchMarkName)
+        print(Fore.GREEN + strline + Fore.CYAN)
+        continue
+    getAllData(BenchMarkUrl)
+
+# 結束測量
+end = time.time()
+
+# 輸出結果
+TotalTIme = "Total Time: %s\n" % (timedelta(seconds=(end - start)))
+# TotalTIme = "Total Time: %s\n" % (datetime.utcfromtimestamp(end - start).strftime("%H:%M:%S.%f"))
+print(TotalTIme)
